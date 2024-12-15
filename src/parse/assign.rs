@@ -18,7 +18,6 @@ pub fn parse_docx_table(content: Vec<String>) -> SummaryModelDocx {
         // 测试报告签发日期
         if item.contains("测试标准")
         {
-            println!("{}------------------------------------", content[index - 1]);
             summary.base.test_date = content[index - 1].clone();
         }
         let field_mappings = HashMap::from([

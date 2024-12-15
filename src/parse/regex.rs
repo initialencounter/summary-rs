@@ -4,7 +4,6 @@ lazy_static! {
     static ref RE_PROJECT_NO: Regex = Regex::new(r"([PSAR]EKGZ[0-9]{12})").unwrap();
 }
 pub fn match_project_no(content: &str) -> String {
-    println!("{}", content);
     let matches: Vec<String> = RE_PROJECT_NO
         .captures_iter(&content)
         .filter_map(|cap| cap[1].parse::<String>().ok())
