@@ -1,18 +1,9 @@
-mod repack;
+mod init;
+mod parse;
+mod types;
+mod reader;
 
-use repack::example_usage;
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        example_usage();
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub use types::*;
+pub use init::modify_docx;
+pub use reader::read_docx_content;
+pub use parse::{parse_docx_table, parse_docx_text, match_project_no};
