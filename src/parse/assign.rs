@@ -45,7 +45,7 @@ pub fn parse_docx_table(content: Vec<String>) -> SummaryModelDocx {
             ("过度充电", &mut summary.base.test7),
             ("强制放电", &mut summary.base.test8),
             ("UN38.3.3.1(f)", &mut summary.base.un38_f),
-            ("UN38.3.3.2(g)", &mut summary.base.un38_g),
+            ("UN38.3.3.1(g)", &mut summary.base.un38_g),
             ("备注", &mut summary.base.note),
         ]);
 
@@ -68,7 +68,8 @@ mod tests {
     #[test]
     fn test_parse_docx() {
         let text = read_docx_content(
-            r"C:\Users\29115\RustroverProjects\docx-rs\tests\test.docx",
+            // r"C:\Users\29115\RustroverProjects\docx-rs\tests\test.docx",
+            r"C:\Users\29115\Downloads\PEKGZ202412167637 概要.docx",
             vec!["word/document.xml".to_string()],
         );
         let content = parse_docx_text(&text.unwrap()[0].clone());
