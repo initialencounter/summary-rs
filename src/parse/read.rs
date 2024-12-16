@@ -82,5 +82,6 @@ pub fn parse_docx_text(content: &str) -> Vec<String> {
         }
         buf.clear();
     }
+    output.push(last_text.clone());
     output
 }
