@@ -4,3 +4,14 @@
 *.json
 *.xml
 .idea
+*.pdf
+*.doc
+*.jpg
+*.png
+*.bmp
+*.gif
+*.tiff
+*.webp
+*.svg
+*.ico
+*.bmp

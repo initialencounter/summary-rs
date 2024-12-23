@@ -2,6 +2,7 @@ mod init;
 mod parse;
 mod types;
 mod reader;
+mod pdf;
 
 pub use types::*;
 pub use init::modify_docx;
